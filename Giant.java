@@ -4,34 +4,36 @@ public class Giant extends Critter {
     private int count;
     public Giant() {
         outerCount = 1;
-        count = 2;
+        count = 0;
 
     }
     public Color getColor (){
+
         return Color.GRAY;
     }
 
     public String toString(){
-        if(outerCount % 7 == 0){
-            if(count > 5){
-                count = 2;
+        if(outerCount == 7){
+            outerCount = 1;
+            if(count == 3){
+                count = 0;
             }
             else{
                 count++;
             }
 
         }
-        if(count % 2 == 0){
+        if(count == 0){
             outerCount++;
             return "fee";
 
         }
-        else if(count % 3 == 0){
+        else if(count == 1){
             outerCount++;
             return "fie";
 
         }
-        else if(count % 4 == 0){
+        else if(count == 2){
             outerCount++;
             return "foe";
 
