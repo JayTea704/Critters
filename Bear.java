@@ -1,6 +1,6 @@
 import java.awt.*;
 public class Bear extends Critter {
-    private static boolean polar;
+    private boolean polar;
     private boolean slash;
     public Bear (boolean polar){
         this.polar = polar;
